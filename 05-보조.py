@@ -1,11 +1,14 @@
-#해당하는 숫자는 박수를 몇 번 쳐야 하는가?
+#1 부터 해당하는 숫자까지 박수를 총 몇 번 쳐야 하는가?
 
-a = 613
+a = 13
 
 counter =0
-문자열=str(a)
-for x in 문자열:
-    if x == '3' or x == '6' or x == '9':
-        counter +=1
 
+for num in range(1, a+1):
+    #해당하는 숫자가 박수를 몇번 치는지
+    문자열=str(a)
+    while num:
+        if num%10==3 or num%10==6 or num%10==9:
+            counter +=1
+        num = num//10
 print(counter)
